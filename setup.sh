@@ -113,7 +113,7 @@ KUBELET_PORT=\"--port=10250\"
 KUBELET_HOSTNAME=\"--hostname-override=$node\"
 KUBELET_API_SERVER=\"--api-servers=http://$master:8080\"
 KUBELET_POD_INFRA_CONTAINER=\"--pod-infra-container-image=$image\"
-KUBELET_ARGS=\"--cluster-dns=$master --cluster-domain=atomic.io/network\"">/etc/kubernetes/kubelet
+KUBELET_ARGS=\"--cluster-dns=10.254.0.100 --cluster-domain=cluster.local\"">/etc/kubernetes/kubelet
 }
 
 #启动node节点相关服务
